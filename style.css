@@ -164,6 +164,7 @@ button {
   padding: 0 var(--size-400);
   margin: var(--size-200);
   height: fit-content;
+  color: var(--clr-primary-100);
 }
 
 .image-container {
@@ -262,7 +263,6 @@ button {
 
 .cta button {
   border: 2px solid var(--clr-primary-100);
-  color: var(--clr-primary-100);
   margin: 0 var(--size-600);
 }
 footer {
