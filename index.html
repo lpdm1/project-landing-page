@@ -4,7 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;700&display=swap" rel="stylesheet">
   <title>Odin Project - Landing Page</title>
 </head>
 
@@ -19,35 +23,52 @@
       </nav>
     </div>
   </header>
-  <main class="main-container">
+  <main>
     <div class="main-content">
       <h1>This website is awesome</h1>
       <p>This website has some subtext that goes here under the main title. It's a smaller font and the color is lower
         contrast</p>
       <button type="submit">Sign Up</button>
     </div>
-    <div class="content-container">This is a plageholder for an image</div>
+    <div class="image-container">This is a plageholder for an image</div>
   </main>
   <section class="main-section">
     <h2>Some random information</h2>
-    <div class="flexbox">
-      <div>This is some subtext under an illustration or image</div>
-      <div>This is some subtext under an illustration or image</div>
-      <div>This is some subtext under an illustration or image</div>
-      <div>This is some subtext under an illustration or image</div>
+    <div class="flexbox-container">
+      <div class="flex-content">
+        <div class="square"></div>
+        <div class="photo"> This is some subtext under an illustration or image</div>
+      </div>
+      <div class="flex-content">
+        <div class="square"></div>
+        <div class="photo"> This is some subtext under an illustration or image</div>
+      </div>
+      <div class="flex-content">
+        <div class="square"></div>
+        <div class="photo"> This is some subtext under an illustration or image</div>
+      </div>
+      <div class="flex-content">
+        <div class="square"></div>
+        <div class="photo"> This is some subtext under an illustration or image</div>
+      </div>
     </div>
   </section>
   <section class="quote">
-    <p>This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people
-      will actually read it. Who knows? All I know is that it looks nice.</p>
-    <p>-Thor, God of Thunder</p>
-  </section>
-  <section>
-    <div class="cta">
-      <h3>Call to action! It's Time!</h3>
-      <p>Sign up for our product by clicking that button right over there!</p>
+    <div class="quote-container">
+      <p class="quote-text">This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up
+        space, or maybe people
+        will actually read it. Who knows? All I know is that it looks nice.</p>
+      <p class="author">-Thor, God of Thunder</p>
     </div>
-    <button type="submit">Sign Up</button>
+  </section>
+  <section class="cta-container">
+    <div class="cta">
+      <div>
+        <h3>Call to action! It's Time!</h3>
+        <p>Sign up for our product by clicking that button right over there!</p>
+      </div>
+      <button type="submit">Sign Up</button>
+    </div>
   </section>
   <footer>
     <p>Copyright @ The Odin Project 2021</p>
