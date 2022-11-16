@@ -186,7 +186,7 @@ button {
   color: var(--clr-primary-100);
 }
 
-button:hover::after {
+button:hover {
   background-color: var(--clr-accent-300);
 }
 
@@ -237,8 +237,10 @@ button:hover::after {
   border-radius: var(--br-200);
 }
 
-.square:hover::after {
-  border: var(--br-200) solid var(--clr-accent-200);
+.square:hover {
+  border: var(--br-100) solid var(--clr-accent-300);
+  background-color: #af754b60;
+  background-blend-mode: overlay;
 }
 
 .photo {
