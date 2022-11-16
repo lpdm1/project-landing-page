@@ -154,7 +154,8 @@ header a {
 }
 
 main {
-  background-color: var(--clr-accent-200);
+  /* background-color: var(--clr-accent-200); */
+  background: linear-gradient(var(--clr-accent-200), #ffff);
   color: var(--clr-neutral-800);
   display: flex;
   justify-content: space-between;
@@ -246,6 +247,7 @@ button:hover {
 .photo {
   text-align: center;
   width: 200px;
+  /* flex-direction: column; */
 }
 
 .one {
