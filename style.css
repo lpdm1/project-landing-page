@@ -114,7 +114,7 @@ body {
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
   /* text-align: center; */
-  min-width: 900px;
+  /* min-width: 900px; */
 }
 
 header {
@@ -128,18 +128,6 @@ header {
   background-color: var(--clr-accent-200);
   color: var(--clr-neutral-800);
 }
-
-/* header > .header-logo {
-  position: relative;
-  left: 200px;
-} */
-
-/* header nav {
-  position: absolute;
-  right: 200px;
-  border: #3882f6 1px solid;
-} */
-
 header a {
   text-decoration: none;
   color: var(--clr-primary-500);
@@ -199,6 +187,7 @@ button:hover {
   background-image: url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29mZmVlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
   background-size: cover;
   border-radius: var(--br-200);
+  background-position: 50%;
 }
 
 .main-section {
@@ -231,43 +220,48 @@ button:hover {
   margin: auto;
 }
 
+.wrapper {
+  text-align: center;
+}
+
 .square {
   border: var(--br-100) solid var(--clr-accent-400);
   width: 200px;
   height: 200px;
   border-radius: var(--br-200);
-}
-
-.square:hover {
-  border: var(--br-100) solid var(--clr-accent-300);
-  background-color: #af754b60;
-  background-blend-mode: overlay;
-}
-
-.photo {
-  text-align: center;
-  width: 200px;
-  /* flex-direction: column; */
+  /* transition: all 0.5s ease-out; */
 }
 
 .one {
   background-image: url("https://images.unsplash.com/photo-1493925410384-84f842e616fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fGNvZmZlZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
   background-size: cover;
+  background-position: 50%;
 }
 .two {
   background-image: url("https://images.unsplash.com/photo-1524350876685-274059332603?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTR8fGNvZmZlZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
   background-size: cover;
+  background-position: 50%;
 }
 .three {
   background-image: url("https://images.unsplash.com/photo-1522012188892-24beb302783d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDR8fGNvZmZlZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
   background-size: cover;
+  background-position: 50%;
 }
 .four {
   background-image: url("https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGNvZmZlZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
   background-size: cover;
+  background-position: 50%;
+}
+
+.photo {
+  text-align: center;
+  position: absolute;
+  width: 200px;
+  display: none;
 }
 
 .quote {
+  margin-top: var(--size-500);
   background-color: var(--clr-primary-200);
   /* padding: var(--size-900); */
   width: 100%;
@@ -331,25 +325,116 @@ footer {
   text-align: center;
   padding: var(--size-300);
 }
+.wrapper:hover .square {
+  border: var(--br-100) solid var(--clr-accent-300);
+  background-color: #af754b60;
+  background-blend-mode: overlay;
+}
 
+.wrapper:hover .photo {
+  display: block;
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media (max-width: 1000px) {
   main {
     flex-direction: column;
     text-align: center;
   }
-
   .main-content {
     width: 100%;
   }
+  .main-content h1 {
+    font-size: var(--fs-700);
+  }
   .image-container {
     margin: 50px;
+    width: 350px;
   }
   .flexbox-container {
     flex-direction: column;
   }
-
+  .flex-content {
+    margin: 25px;
+  }
   .square {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
+  }
+  .quote-text {
+    padding: 25px;
+    text-align: center;
+    font-size: var(--size-300);
+  }
+  .author {
+    font-size: var(--fs-400);
+  }
+  .cta-container {
+    margin: 25px;
+  }
+}
+
+@media (max-width: 750px) {
+  header {
+    padding: var(--size-200) var(--size-500) 0 var(--size-500);
+  }
+  .main-content {
+    font-size: var(--fs-400);
+  }
+  .main-content h1 {
+    font-size: var(--fs-600);
+  }
+  button {
+    font-size: var(--fs-400);
+  }
+  .photo {
+    display: block;
+  }
+  .quote-text {
+    padding: 25px;
+    text-align: center;
+    font-size: var(--size-300);
+  }
+  .cta {
+    display: flex;
+    flex-direction: column;
   }
 }
