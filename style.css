@@ -439,6 +439,7 @@ footer {
 }
 @media (max-width: 1000px) {
   main {
+    width: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -446,17 +447,14 @@ footer {
     align-items: center;
   }
   .main-content {
-    width: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     align-items: center;
-    width: 50vh;
   }
   .main-content h1 {
     font-size: var(--fs-700);
-    width: 50vh;
   }
   .image-container {
     margin: 50px;
@@ -537,6 +535,7 @@ footer {
   .menu > li {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0.5em 0;
     width: 100%;
@@ -549,6 +548,9 @@ footer {
   main {
     margin: 0;
     padding: 0;
+  }
+  .main-content {
+    width: auto;
   }
   .main-section h2 {
     padding-bottom: 0;
